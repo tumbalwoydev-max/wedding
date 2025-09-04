@@ -12,7 +12,7 @@ export const data = {
       id: 2,
       name: "Ajeng Widia Sari",
       child: "Anak ke Tiga",
-      father: "H. Abad Muttaqin alm",
+      father: "H. Abad Muttaqin (alm)",
       mother: "Ida Laela Sari",
       image: "./src/assets/images/cewe.png",
     },
@@ -21,29 +21,30 @@ export const data = {
   },
 
   time: {
-    marriage: {
-      year: "2025",
-      month: "Oktober",
-      date: "19",
-      day: "Sabtu",
-      hours: {
-        start: "09.00",
-        finish: "Selesai",
-      },
+  marriage: {
+    year: "2025",
+    month: "Oktober",
+    date: "18",
+    day: "Sabtu",
+    hours: {
+      start: "09.00",
+      finish: "Selesai",
     },
-    reception: {
-      year: "2025",
-      month: "Oktober",
-      date: "19",
-      day: "Minggu",
-      hours: {
-        start: "08.00",
-        finish: "Selesai",
-      },
-    },
-    address:
-      "Kp. Cinawala RT 02 RW 03 Desa Padajaya Kec Cikalongkulon Kab Cianjur",
   },
+  reception: {
+    year: "2025",
+    month: "Oktober",
+    date: "19",
+    day: "Minggu",
+    hours: {
+      start: "08.00",
+      finish: "Selesai",
+    },
+  },
+  address:
+    "Kp. Cinawala RT 02 RW 03 Desa Padajaya Kec Cikalongkulon Kab Cianjur",
+},
+
 
   link: {
     calendar: "https://calendar.app.google/AV2pJ29gtFxpCefW7",

@@ -18,3 +18,17 @@ document.addEventListener('DOMContentLoaded', () => {
     galeri();
     wishas();
 });
+
+// Ambil parameter "to" dari URL
+const urlParams = new URLSearchParams(window.location.search);
+const guest = urlParams.get("to");
+
+// Target elemen <p id="guest-name">
+const guestNameElement = document.getElementById("guest-name");
+
+// Kalau ada parameter "to", tulis "Kepada [Nama]"
+if (guest && guestNameElement) {
+  guestNameElement.textContent = `Kepada ${guest}`;
+} else if (guestNameElement) {
+  guestNameElement.textContent = "Kepada Bapak/Ibu/Saudara/i";
+}

@@ -1,0 +1,98 @@
+.welcome {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background: var(--moca-gradient); /* Ubah dari #212529 ke gradasi moca */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    color: var(--primary-font-color); /* Ubah dari #fff ke warna font utama (gelap) */
+    transition: all 2s ease-in;
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.welcome.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.welcome.hide {
+    top: -100%;
+    opacity: 0;
+}
+
+.welcome h2 {
+    font-size: 2.4rem;
+    font-family: var(--sacramento);
+    font-weight: 400;
+    color: #212529; /* Pastikan teks gelap di background terang */
+}
+
+.welcome figure {
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    flex-direction: inherit;
+    margin: 1rem 0;
+}
+
+.welcome figure img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(212, 196, 176, 0.4); /* Shadow dengan warna moca */
+    border: 2px solid var(--moca-dark); /* Border dengan warna moca */
+}
+
+.welcome figure figcaption {
+    font-size: var(--fontSize-heading-base);
+    font-family: var(--sacramento);
+    font-weight: 400;
+    margin-top: 0.5rem;
+    color: #212529; /* Teks gelap untuk kontras */
+}
+
+.welcome p {
+    color: #212529; /* Teks gelap */
+}
+
+.welcome p span {
+    font-size: 2rem;
+    margin: 1rem 0;
+    display: block;
+    color: #212529; /* Teks gelap */
+}
+
+.welcome button {
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    gap: 0.4rem;
+    color: #212529; /* Teks button gelap */
+    background-color: var(--moca-light); /* Background button moca terang */
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--moca-dark); /* Border moca */
+    transition: var(--transition-small);
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(212, 196, 176, 0.3); /* Shadow moca */
+}
+
+.welcome button:hover {
+    color: var(--moca-light); /* Teks terang saat hover */
+    background-color: var(--moca-dark); /* Background gelap saat hover */
+    border-color: var(--moca-dark);
+}
+
+.welcome button i {
+    font-size: 1.2rem;
+}

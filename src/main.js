@@ -5,6 +5,7 @@ import {galeri} from "./js/galeri.js";
 import {wishas} from "./js/wishas.js";
 import {navbar} from "./js/navbar.js";
 import {welcome} from "./js/welcome.js";
+import {loveStory} from "./js/lovestory.js";
 
 // load content
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     time();
     galeri();
     wishas();
+    loveStory();
 });
 
 // Ambil parameter "to" dari URL

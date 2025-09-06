@@ -1,0 +1,300 @@
+        :root {
+            --primary-font-color: '#212529';
+            --bg-color: #f5f3f0;
+            --fontSize-heading-lg: 3rem;
+            --fontSize-heading-base: 2.8rem;
+            --fontSize-text-base: 1rem;
+            --sacramento: Sacramento, cursive;
+            --arabic: 'Noto Naskh Arabic', serif;
+            --shadow-md: 0 0 10px rgba(0, 0, 0, 0.3);
+            --transition-small: all .3s ease;
+            --moca-light: #f5f3f0;
+            --moca-medium: #e8e0d6;
+            --moca-dark: #d4c4b0;
+            --moca-gradient: linear-gradient(135deg, #f5f3f0 0%, #e8e0d6 50%, #d4c4b0 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            background: var(--moca-gradient);
+            color: var(--primary-font-color);
+            line-height: 1.6;
+            padding: 2rem 0;
+        }
+
+        /* Love Story Section */
+        .love-story {
+            padding: 4rem 1rem;
+            background: var(--moca-gradient);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .love-story::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="%23d4c4b0" opacity="0.3"/><circle cx="80" cy="40" r="1" fill="%23e8e0d6" opacity="0.4"/><circle cx="40" cy="60" r="1" fill="%23d4c4b0" opacity="0.3"/><circle cx="70" cy="80" r="1" fill="%23e8e0d6" opacity="0.4"/></svg>') repeat;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .love-story .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .love-story h2 {
+            text-align: center;
+            font-size: var(--fontSize-heading-base);
+            font-family: var(--sacramento);
+            font-weight: 400;
+            margin-bottom: 1rem;
+            color: #5a4a3a;
+        }
+
+        .love-story > p {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+            color: #6b5b4b;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .timeline {
+            position: relative;
+            margin: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #d4c4b0, #e8e0d6, #d4c4b0);
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin: 3rem 0;
+            position: relative;
+            align-items: center;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(212, 196, 176, 0.3);
+            width: calc(50% - 2rem);
+            position: relative;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 196, 176, 0.2);
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 0;
+            height: 0;
+            transform: translateY(-50%);
+            border: 15px solid transparent;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            right: -30px;
+            border-left-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -30px;
+            border-right-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .timeline-date {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #d4c4b0, #e8e0d6);
+            color: #5a4a3a;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(212, 196, 176, 0.4);
+            z-index: 2;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .timeline-icon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #f5f3f0, #e8e0d6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #5a4a3a;
+            box-shadow: 0 6px 20px rgba(212, 196, 176, 0.4);
+            z-index: 3;
+            border: 3px solid rgba(255, 255, 255, 0.9);
+        }
+
+        .story-title {
+            font-family: var(--sacramento);
+            font-size: 1.8rem;
+            color: #5a4a3a;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .story-text {
+            color: #6b5b4b;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .story-quote {
+            font-style: italic;
+            color: #8a7a6a;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: rgba(212, 196, 176, 0.1);
+            border-left: 4px solid #d4c4b0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* Floating Hearts Animation */
+        .floating-hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .floating-heart {
+            position: absolute;
+            color: #e8a87c;
+            font-size: 1.5rem;
+            animation: floatUp 8s linear infinite;
+            opacity: 0;
+        }
+
+        .floating-heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .floating-heart:nth-child(2) { left: 20%; animation-delay: 2s; }
+        .floating-heart:nth-child(3) { left: 30%; animation-delay: 4s; }
+        .floating-heart:nth-child(4) { left: 70%; animation-delay: 1s; }
+        .floating-heart:nth-child(5) { left: 80%; animation-delay: 3s; }
+        .floating-heart:nth-child(6) { left: 90%; animation-delay: 5s; }
+
+        @keyframes floatUp {
+            0% {
+                opacity: 0;
+                transform: translateY(100vh) scale(0.5);
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-100px) scale(1);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 2rem;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-left: 2rem;
+            }
+
+            .timeline-item:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .timeline-content {
+                width: calc(100% - 4rem);
+                margin-left: 2rem;
+            }
+
+            .timeline-content::before {
+                display: none;
+            }
+
+            .timeline-date {
+                position: relative;
+                left: auto;
+                transform: none;
+                margin-bottom: 1rem;
+                display: inline-block;
+            }
+
+            .timeline-icon {
+                left: 2rem;
+                transform: translateX(-50%);
+            }
+
+            .love-story h2 {
+                font-size: 2rem;
+            }
+
+            .story-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Hover Effects */
+        .timeline-content {
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(212, 196, 176, 0.4);
+        }
+
+        .timeline-icon {
+            transition: all 0.3s ease;
+        }
+
+        .timeline-icon:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            box-shadow: 0 8px 25px rgba(212, 196, 176, 0.6);
+        }
